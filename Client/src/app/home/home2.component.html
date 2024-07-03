@@ -1,0 +1,790 @@
+<head>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/htmlincludejs"></script>
+
+
+    <!-- normalize css -->
+    <!-- <style>
+        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+        /* Document
+        ========================================================================== */
+
+        /**
+        * 1. Correct the line height in all browsers.
+        * 2. Prevent adjustments of font size after orientation changes in iOS.
+        */
+
+        html {
+        line-height: 1.15; /* 1 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+        }
+
+        /* Sections
+        ========================================================================== */
+
+        /**
+        * Remove the margin in all browsers.
+        */
+
+        body {
+        margin: 0;
+        }
+
+        /**
+        * Render the `main` element consistently in IE.
+        */
+
+        main {
+        display: block;
+        }
+
+        /**
+        * Correct the font size and margin on `h1` elements within `section` and
+        * `article` contexts in Chrome, Firefox, and Safari.
+        */
+
+        h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+        }
+
+        /* Grouping content
+        ========================================================================== */
+
+        /**
+        * 1. Add the correct box sizing in Firefox.
+        * 2. Show the overflow in Edge and IE.
+        */
+
+        hr {
+        box-sizing: content-box; /* 1 */
+        height: 0; /* 1 */
+        overflow:hidden; /* 2 */
+        }
+
+        /**
+        * 1. Correct the inheritance and scaling of font size in all browsers.
+        * 2. Correct the odd `em` font sizing in all browsers.
+        */
+
+        pre {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+        }
+
+        /* Text-level semantics
+        ========================================================================== */
+
+        /**
+        * Remove the gray background on active links in IE 10.
+        */
+
+        a {
+        background-color: transparent;
+        }
+
+        /**
+        * 1. Remove the bottom border in Chrome 57-
+        * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+        */
+
+        abbr[title] {
+        border-bottom: none; /* 1 */
+        text-decoration: underline; /* 2 */
+        text-decoration: underline dotted; /* 2 */
+        }
+
+        /**
+        * Add the correct font weight in Chrome, Edge, and Safari.
+        */
+
+        b,
+        strong {
+        font-weight: bolder;
+        }
+
+        /**
+        * 1. Correct the inheritance and scaling of font size in all browsers.
+        * 2. Correct the odd `em` font sizing in all browsers.
+        */
+
+        code,
+        kbd,
+        samp {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+        }
+
+        /**
+        * Add the correct font size in all browsers.
+        */
+
+        small {
+        font-size: 80%;
+        }
+
+        /**
+        * Prevent `sub` and `sup` elements from affecting the line height in
+        * all browsers.
+        */
+
+        sub,
+        sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+        }
+
+        sub {
+        bottom: -0.25em;
+        }
+
+        sup {
+        top: -0.5em;
+        }
+
+        /* Embedded content
+        ========================================================================== */
+
+        /**
+        * Remove the border on images inside links in IE 10.
+        */
+
+        img {
+        border-style: none;
+        }
+
+        /* Forms
+        ========================================================================== */
+
+        /**
+        * 1. Change the font styles in all browsers.
+        * 2. Remove the margin in Firefox and Safari.
+        */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+        }
+
+        /**
+        * Show the overflow in IE.
+        * 1. Show the overflow in Edge.
+        */
+
+        button,
+        input { /* 1 */
+        overflow:hidden;
+        }
+
+        /**
+        * Remove the inheritance of text transform in Edge, Firefox, and IE.
+        * 1. Remove the inheritance of text transform in Firefox.
+        */
+
+        button,
+        select { /* 1 */
+        text-transform: none;
+        }
+
+        /**
+        * Correct the inability to style clickable types in iOS and Safari.
+        */
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+        appearance: button;
+        }
+
+        /**
+        * Remove the inner border and padding in Firefox.
+        */
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+        }
+
+        /**
+        * Restore the focus styles unset by the previous rule.
+        */
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+        }
+
+        /**
+        * Correct the padding in Firefox.
+        */
+
+        fieldset {
+        padding: 0.35em 0.75em 0.625em;
+        }
+
+        /**
+        * 1. Correct the text wrapping in Edge and IE.
+        * 2. Correct the color inheritance from `fieldset` elements in IE.
+        * 3. Remove the padding so developers are not caught out when they zero out
+        *    `fieldset` elements in all browsers.
+        */
+
+        legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+        }
+
+        /**
+        * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+        */
+
+        progress {
+        vertical-align: baseline;
+        }
+
+        /**
+        * Remove the default vertical scrollbar in IE 10+.
+        */
+
+        textarea {
+        overflow: hidden;
+        }
+
+        /**
+        * 1. Add the correct box sizing in IE 10.
+        * 2. Remove the padding in IE 10.
+        */
+
+        [type="checkbox"],
+        [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+        }
+
+        /**
+        * Correct the cursor style of increment and decrement buttons in Chrome.
+        */
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+        }
+
+        /**
+        * 1. Correct the odd appearance in Chrome and Safari.
+        * 2. Correct the outline style in Safari.
+        */
+
+        [type="search"] {
+        appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+        }
+
+        /**
+        * Remove the inner padding in Chrome and Safari on macOS.
+        */
+
+        [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+        }
+
+        /**
+        * 1. Correct the inability to style clickable types in iOS and Safari.
+        * 2. Change font properties to `inherit` in Safari.
+        */
+
+        ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+        }
+
+        /* Interactive
+        ========================================================================== */
+
+        /*
+        * Add the correct display in Edge, IE 10+, and Firefox.
+        */
+
+        details {
+        display: block;
+        }
+
+        /*
+        * Add the correct display in all browsers.
+        */
+
+        summary {
+        display: list-item;
+        }
+
+        /* Misc
+        ========================================================================== */
+
+        /**
+        * Add the correct display in IE 10+.
+        */
+
+        template {
+        display: none;
+        }
+
+        /**
+        * Add the correct display in IE 10.
+        */
+
+        [hidden] {
+        display: none;
+        }
+    </style> -->
+    <!-- custom css -->
+
+    <link rel="stylesheet" href="./home2.component.sass">
+
+    <!-- custom js -->
+    <script>
+        // navbar toggling
+        const navbarShowBtn = document.querySelector('.navbar-show-btn');
+        const navbarCollapseDiv = document.querySelector('.navbar-collapse');
+        const navbarHideBtn = document.querySelector('.navbar-hide-btn');
+
+        navbarShowBtn.addEventListener('click', function(){
+            navbarCollapseDiv.classList.add('navbar-show');
+        });
+        navbarHideBtn.addEventListener('click', function(){
+            navbarCollapseDiv.classList.remove('navbar-show');
+        });
+
+        // changing search icon image on window resize
+        window.addEventListener('resize', changeSearchIcon);
+        function changeSearchIcon(){
+            let winSize = window.matchMedia("(min-width: 1200px)");
+            if(winSize.matches){
+                document.querySelector('.search-icon img').src = "../../../assets/images/search-icon.png";
+            } else {
+                document.querySelector('.search-icon img').src = "../../../assets/images/search-icon-dark.png";
+            }
+        }
+        changeSearchIcon();
+
+        // stopping all animation and transition
+        let resizeTimer;
+        window.addEventListener('resize', () =>{
+            document.body.classList.add('resize-animation-stopper');
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                document.body.classList.remove('resize-animation-stopper');
+            }, 400);
+        });
+    </script>
+</head>
+<body>
+
+    <main>
+        <!-- about section -->
+        <section id = "about" class = "about py">
+            <div class = "about-inner">
+                <div class = "container grid">
+                    <div class = "about-left text-center">
+                        <div class = "section-head">
+                            <br><br>
+                            <h2>About Us</h2>
+                            <div class = "border-line"></div>
+                        </div>
+                        <p class = "text text-lg">
+                            Welcome to MedMonitor Hospital, your trusted partner in personalized online healthcare.
+                        <br>
+                            Our mission is to provide accessible, convenient, and high-quality healthcare services right at your fingertips!</p>
+                        <a href = "../../app/about.component.html" class = "btn btn-blue">Learn More</a>
+                    </div>
+                    <div class = "about-right flex">
+                        <div class = "img">
+                            <img src = "../../../assets/images/about-img.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- banner one -->
+        <section id = "banner-one" class = "banner-one text-center">
+            <div class = "container text-white">
+                <blockquote class = "lead"><i class = "fas fa-quote-left"></i> 
+                    When you are young and healthy, it never occurs to you that in a single second your whole life could change. <i class = "fas fa-quote-right"></i></blockquote>
+                <small class = "text text-sm">- Anonim Nano</small>
+            </div>
+        </section>
+        <!-- end of banner one -->
+
+        <!-- services section -->
+        <section id = "services" class = "services py">
+            <div class = "container">
+                <div class = "section-head text-center">
+                    <h2 class = "lead">The Best Doctor gives the least medicines</h2>
+                    <p class = "text text-lg">A perfect way to show your hospital services</p>
+                    <div class = "line-art flex">
+                        <div></div>
+                        <img src = "../../../assets/images/4-dots.png">
+                        <div></div>
+                    </div>
+                </div>
+                <div class = "services-inner text-center grid">
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "../../../assets/images/service-icon-1.png">
+                        </div>
+                        <h3>Cardio Monitoring</h3>
+                        <p class = "text text-sm">
+                            Our advanced Cardio Monitoring service provides expert care for heart health, managing chronic conditions and optimizing cardiovascular wellness through continuous remote monitoring by our team of cardiologists. We offer:
+                            
+                            <br>-> 24/7 Heart Surveillance
+                            
+                            <br>-> Customized Plans
+                            
+                            <br>-> Peace of Mind</p>
+                    </article>
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "../../../assets/images/service-icon-2.png">
+                        </div>
+                        <h3>Medical Treatment</h3>
+                        <p class = "text text-sm">
+                            MedMonitor Hospital offers comprehensive medical treatment services, backed by experienced physicians and specialists, to address various health concerns.
+                            <br>-> Diagnosis & Evaluation
+                            <br>-> Treatment Plans
+                            <br>-> Timely Interventions
+                            <br>-> Follow-Up Care
+                        </p>
+                    </article>
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "../../../assets/images/service-icon-3.png">
+                        </div>
+                        <h3>Emergency Help</h3>
+                        <p class = "text text-sm">
+                            In emergencies, every second counts. MedMonitor Hospital is your lifeline during critical situations. Our Emergency Help service offers:
+                            <br>-> Quick Response
+                            <br>-> GPS Location Sharing
+                            <br>-> Medical History Access
+                            <br>-> Peace of Mind
+                        </p>
+                    </article>
+
+                    <article class = "service-item">
+                        <div class = "icon">
+                            <img src = "../../../assets/images/service-icon-4.png">
+                        </div>
+                        <h3 style="text-align: center;">First Aid</h3>
+                        <p class = "text text-sm">
+                            Be prepared for life's unexpected moments with our First Aid service. It empowers you with the knowledge and tools to respond effectively to minor injuries and health concerns:
+                            <br>-> Step-by-Step Guidance
+                            <br>-> Video Tutorials
+                            <br>-> Emergency Contact Integration
+                            <br>-> Safety Tips
+                        </p>
+                    </article>
+                </div>
+                <hr>
+                <p style="text-align: center;">
+                    At MedMonitor Hospital, your health and well-being are our top priorities. We are here to provide you with exceptional care, support, and resources for a healthier, more confident life.</p>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- banner two section -->
+        <section id = "banner-two" class = "banner-two text-center">
+            <div class = "container grid">
+                <div class = "banner-two-left">
+                    <img src = "../../../assets/images/banner-2-img.png">
+                </div>
+                <div class = "banner-two-right">
+                    <p class = "lead text-white">
+                        When you are young and healthy, it never occurs to you that in a single second your whole life could change.</p>
+                    <div class = "btn-group">
+                        <a href = "#" class = "btn btn-white">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of banner two section -->
+
+        <!-- doctors section -->
+        <section id = "doc-panel" class = "doc-panel py">
+            <div class = "container">
+                <div class = "section-head">
+                    <h2>Our Doctor Panel</h2>
+                </div>
+
+                <div class = "doc-panel-inner grid">
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "../../../assets/images/dr-2.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Dr. Fahmida Begum</p>
+                                <p class = "text-lg">Nephrologist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "../../../assets/images/dr-1.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Dr. Ebadur Rahman</p>
+                                <p class = "text-lg">Nuerologist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "doc-panel-item">
+                        <div class = "img flex">
+                            <img src = "../../../assets/images/dr-3.png" alt = "doctor image">
+                            <div class = "info text-center bg-blue text-white flex">
+                                <p class = "lead">Dr. Jasmin Manzoor</p>
+                                <p class = "text-lg">Dermatologist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of doctors section -->
+
+        <!-- package services section -->
+        <section id = "package-service" class = "package-service py text-center">
+            <div class = "container">
+                <div class = "package-service-head text-white">
+                    <h2>Package Service</h2>
+                    <p class = "text text-lg"><u>Best service packages for you</u></p>
+                </div>
+                <div class = "package-service-inner grid">
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-phone fa-2x"></i>
+                        </div>
+                        <h3>Regular Case</h3>
+                        <p class = "text text-sm">
+                            Our Regular Case Package is designed to cover routine healthcare needs and preventive measures, ensuring your well-being is maintained with convenience and affordability. It includes:
+                            <br>-> Doctor Consultation
+                            <br>-> Annual Checkups
+                            <br>-> Diagnostic Tests
+                            <br>-> 24/7 Help Helpline
+                        </p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-calendar-alt fa-2x"></i>
+                        </div>
+                        <h3>Serious Case</h3>
+                        <p class = "text text-sm">
+                            Our Serious Case Package provides extensive support for individuals managing chronic illnesses or facing more complex healthcare needs. MedMonitor doctors are there for you 24/7. It includes:
+                            <br>-> Advanced Diagnostics
+                            <br>-> Specialist Consultations
+                            <br>-> Health Tracking App
+                            <br>-> Care Coordination
+                        </p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+                    
+                    <div class = "package-service-item bg-white">
+                        <div class = "icon flex">
+                            <i class = "fas fa-comments fa-2x"></i>
+                        </div>
+                        <h3>Emergency Case</h3>
+                        <p class = "text text-sm">
+                            When seconds matter, our Emergency Case Package provides rapid, life-saving assistance. MedMonitor Hospital is at your service anytime anyday. It includes:
+                            <br>-> Priority Access
+                            <br>-> Ambulance Dispatch
+                            <br>-> Hospital Coordination
+                            <br>-> Family Notifications
+                        </p>
+                        <a href = "#" class = "btn btn-blue">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of package services section -->
+
+        <!-- posts section -->
+        <section id = "posts" class = "posts py">
+            <div class = "container">
+                <div class = "section-head">
+                    <h2>Latest Post</h2>
+                </div>
+                <div class = "posts-inner grid">
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "../../../assets/images/post-3.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>MedMonitor Introduces New Features</h4>
+                            <p class = "text text-sm">We are constantly making updates to provide you with the most up to date and competent software. We have some new features that will help you better manage your practice or clinic and give you more options for customisation.   Digital Forms You can now add a ‘Save Draft’ button…</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> September 4, 2023</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 7 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "../../../assets/images/post-2.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>Paper vs Digital</h4>
+                            <p class = "text text-sm">As we are aware, healthcare is continually evolving to meet the demands of the 21st century. With that, healthcare businesses nationwide are exploring the possibility of shifting from paper to digital as well as the benefits and input associated with this change. As we know the prospect of transitioning systems…</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> March 27, 2022</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 0 comments</small>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class = "post-item bg-white">
+                        <div class = "img">
+                            <img src = "../../../assets/images/post-1.jpg">
+                        </div>
+                        <div class = "content">
+                            <h4>Video Conferencing to reduce COVID-19 contamination</h4>
+                            <p class = "text text-sm">Healthcare providers to use Video Conferencing to reduce COVID-19 contamination. Healthcare providers that offer virtual care to their patients are already ahead of the game when it comes to managing the challenges faced by most businesses during this worldwide pandemic...</p>
+                            <div class = "info flex">
+                                <small class = "text text-sm"><i class = "fas fa-clock"></i> April 7, 2021</small>
+                                <small class = "text text-sm"><i class = "fas fa-comment"></i> 12 comments</small>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- end of posts section -->
+
+        <!-- contact section -->
+        <section id = "contact" class = "contact py">
+            <div class = "container grid">
+                <div class = "contact-left">
+                    <br><br> <br><br><br>
+                    <img src="../../../assets/images/about-img.png" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                </div>
+                <div class = "contact-right text-white text-center bg-blue">
+                    <div class = "contact-head">
+                        <h3 class = "lead">Contact Us</h3>
+                        <p class = "text text-md">Connecting Care | Reach Out for Wellness</p>
+                    </div>
+                    <form>
+                        <div class = "form-element">
+                            <input type = "text" class = "form-control" placeholder="Your name">
+                        </div>
+                        <div class = "form-element">
+                            <input type = "email" class = "form-control" placeholder="Your email">
+                        </div>
+                        <div class = "form-element">
+                            <textarea rows = "5" placeholder="Your Message" class = "form-control"></textarea>
+                        </div>
+                        <button type = "submit" class = "btn btn-white btn-submit">
+                            <i class = "fas fa-arrow-right"></i> <a href="mailto:fardinahmed.jim.7@gmail.com, aaminaamey123@gmail.com?subject=MedMonitor Hospital">Send Message</a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
+    </main>
+
+    <!-- footer  -->
+    <footer id = "footer" class = "footer text-center">
+        <div class = "container">
+            <div class = "footer-inner text-white py grid">
+                <div class = "footer-item">
+                    <h3 class = "footer-head">About us</h3>
+                    <div class = "icon">
+                        <img src = "../../../assets/images/logofooter.png">
+                    </div>
+                    <p class = "text text-md">
+                        Thankyou for choosing MedMotnitor Hospital. Your health is our top priority, and we are here to provide you with the care you deserve.
+                    </p>
+                    <address>
+                        MedMonitor Hospital <br>
+                        07 Aftabuddin Ahmed Rd, Block#B <br>
+                        Bashundhara R/A, Dhaka 1229 <br>
+                        Bangladesh
+                    </address>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head">tags</h3>
+                    <ul class = "tags-list flex">
+                        <li>Medical Care</li>
+                        <li>Emergency</li>
+                        <li>Therapy</li>
+                        <li>Surgery</li>
+                        <li>Medication</li>
+                        <li>Nurse</li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href = "#" class = "text-white">Our Services</a></li>
+                        <li><a href = "#" class = "text-white">Our Plan</a></li>
+                        <li><a href = "#" class = "text-white">Privacy Policy</a></li>
+                        <li><a href = "#" class = "text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h3 class = "footer-head">make an appointment</h3>
+                    <p class = "text text-md">We are here, for your care.</p>
+                    <ul class = "appointment-info">
+                        <li>8:00 AM - 11:00 AM</li>
+                        <li>2:00 PM - 05:00 PM</li>
+                        <li>8:00 PM - 11:00 PM</li>
+                        <li>
+                            <i class = "fas fa-envelope"></i>
+                            <span>medmonitor.com</span>
+                        </li>
+                        <li>
+                            <i class = "fas fa-phone"></i>
+                            <span>+031 743 2083(00)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "footer-links">
+                <ul class = "flex">
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-facebook-f"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-github"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer  -->
+
+</body>
