@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { rejects } from 'assert';
 import { resolve } from 'dns';
-import { localAPI } from 'src/environments/environment';
+import { localAPI } from '../../environments/environment';
 import { BlockchainService } from 'src/services/blockchain.service';
 import { IpfsService } from 'src/services/ipfs.service';
 
